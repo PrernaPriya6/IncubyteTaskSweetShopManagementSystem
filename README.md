@@ -1,4 +1,3 @@
-# IncubyteTaskSweetShopManagementSystem
 # Sweet Shop Management System
 
 ## Overview
