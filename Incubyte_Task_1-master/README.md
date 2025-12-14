@@ -1,88 +1,160 @@
- # Sweet Shop Management System  
+# Sweet Shop Management System
 
-## Overview  
+## Overview
 
-A full-stack Sweet Shop Management System built with **Java (Spring Boot)** for backend and **ReactJS** for frontend, developed using **Test-Driven Development (TDD)** approach using **JUnit 5**.  
+The **Sweet Shop Management System** is a full-stack web application designed to manage sweets inventory and sales operations in a simple and efficient way. The backend is developed using **Java with Spring Boot**, while the frontend is built using **ReactJS**. The project strictly follows a **Test-Driven Development (TDD)** methodology, where all business logic was implemented only after writing test cases using **JUnit 5**.
 
-## Key Features  
+This application was created as part of the **Incubyte TDD Kata Assessment**, with a strong focus on clean architecture, test coverage, and clear separation of concerns.
 
-- Add, View, Delete Sweets  
-- Search by Name, Category, or Price Range  
-- Sort by Price or Quantity (Ascending & Descending)  
-- Purchase & Restock with Stock Validation  
-- Exception Handling with Custom Errors  
-- Responsive, Clean, User-Friendly UI with Bootstrap  
-- No Database Used — In-memory List Management  
+---
 
-## Project Structure  
+## Key Features
+
+* Add, view, and delete sweets
+* Search sweets by name, category, or price range
+* Sort sweets by price or quantity (both ascending and descending)
+* Purchase sweets with stock validation
+* Restock sweets with quantity checks
+* Centralized exception handling using custom exceptions
+* Responsive and user-friendly UI using Bootstrap
+* In-memory data storage (no external database used)
+
+---
+
+## Project Structure
+
+### Backend
+
 ```
-/Backend  
- ├── src  
- │   ├── main  
- │   │   └── java  
- │   │       └── com.incubyte.sweetshop  
- │   │            ├── controller  
- │   │            ├── service  
- │   │            ├── model  
- │   │            └── customExceptions  
- │   └── test  
- │       └── java  
- │           └── com.incubyte.sweetshop.service  
- └── pom.xml  
+/Backend
+ ├── src
+ │   ├── main
+ │   │   └── java
+ │   │       └── com.incubyte.sweetshop
+ │   │            ├── controller
+ │   │            ├── service
+ │   │            ├── model
+ │   │            └── customExceptions
+ │   └── test
+ │       └── java
+ │           └── com.incubyte.sweetshop.service
+ └── pom.xml
+```
 
+### Frontend
+
+```
 /Frontend
-└── src
-└── package.json
-
-README.md
+ ├── src
+ └── package.json
 ```
 
-## TDD Journey Highlights  
+---
 
-- Wrote failing tests first (Red)  
-- Developed minimal code to pass tests (Green)  
-- Refactored and improved code (Refactor) with 100% Coverage
-- Handled tests with custom exceptions
-- Wrote test cases for each method including edge cases  
-- Maintained meaningful Git commits for each step  
+## TDD Journey Highlights
 
-## API Highlights  
+* Followed the Red-Green-Refactor cycle consistently
+* Started by writing failing test cases before implementation
+* Implemented only the minimum code required to pass tests
+* Refactored code after tests passed to improve readability and design
+* Achieved complete test coverage for service-layer logic
+* Included edge case testing and validation scenarios
+* Used meaningful and incremental Git commits throughout development
 
-- **Add Sweet:** `POST /sweetshop/api/sweet/add`  
-- **Get All Sweets:** `GET /sweetshop/api/sweet/getAllSweets`  
-- **Search, Sort, Purchase, Restock — Fully Functional APIs**  
+---
 
-## Technologies Used  
+## API Overview
 
-### Backend  
-- Java 21  
-- Spring Boot 3.5.3  
-- JUnit 5  
-- Maven  
-- Custom Exceptions & Services  
+* **Add Sweet**: `POST /sweetshop/api/sweet/add`
+* **Get All Sweets**: `GET /sweetshop/api/sweet/getAllSweets`
+* **Search, Sort, Purchase, Restock**: Fully implemented REST APIs following clean service-based architecture
 
-### Frontend  
-- ReactJS  
-- Axios (for API calls)  
-- Bootstrap 5  
-- React Hot Toast (for user notifications)  
+---
 
-## How to Run  
-### Backend  
+## Technologies Used
+
+### Backend
+
+* Java 21
+* Spring Boot 3.5.3
+* JUnit 5
+* Maven
+* Custom Exception Handling
+
+### Frontend
+
+* ReactJS
+* Axios (API communication)
+* Bootstrap 5
+* React Hot Toast (notifications)
+
+---
+
+## How to Run the Project Locally
+
+### Backend Setup
+
 ```bash
 cd Backend
 mvn clean install
 mvn spring-boot:run
 ```
-Backend runs on: http://localhost:8080
 
-### Backend  
+Backend will start at: `http://localhost:8080`
+
+### Frontend Setup
+
 ```bash
 cd Frontend
 npm install
 npm run dev
 ```
-Frontend runs on: http://localhost:5173
+
+Frontend will run at: `http://localhost:5173`
+
+---
+
+## Application Screenshots
+
+* Home Page
+* Add Sweet Modal
+* Sorting by Quantity (Ascending)
+* Searching by Name
+* Searching by Category
+* Sorting by Price Range (Min & Max)
+* Deleting a Sweet (Gajar Halwa)
+* Purchasing a Sweet (Rabdi)
+* Restocking a Sweet (Kaju Katli)
+
+Additional screenshots are available in the **screenshots** folder.
+
+---
+
+
+
+
+## Test Report
+
+* All service-layer test cases executed successfully
+* 100% pass rate for implemented test scenarios
+* Tests include positive flows, edge cases, and exception conditions
+
+---
+
+## Author
+
+**Prerna Priya**
+
+This project was developed as part of the **Incubyte Assessment**.
+
+---
+
+## Notes
+
+* No external database was used; all data is managed in memory
+* Plagiarism-free implementation
+* AI assistance was used responsibly and transparently, as described above
+
 
 ## Screenshots Of Frontend
 
@@ -116,5 +188,5 @@ Frontend runs on: http://localhost:5173
 - Rest of the Screenshots are attached in screenshots folder
 ## Author
 
-Preksha Divraniya  
-This project is built as part of the Incubyte TDD Kata Assessment.
+Prerna Priya
+This project is built as part of the Incubyte Assessment.
